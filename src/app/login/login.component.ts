@@ -1,15 +1,23 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import {Router } from '@angular/router';
+
+//connect with firebase
+import { AngularFireAuth } from '@angular/fire/auth';
+import * as firebase from 'firebase/app';
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
+
+  
 })
 export class LoginComponent implements OnInit {courses:any[]
   constructor(private router:Router,
-             ) { 
-                
-              }
+              public afAuth: AngularFireAuth ) { }
+              
+
   username=""
   password=""
   view= true;
@@ -35,16 +43,24 @@ export class LoginComponent implements OnInit {courses:any[]
    // console.log("HI=>>",this.router);
     
   }
+  // login(){
+  //   if(this.dialog === 0){
+  //     if( this.username === 'soe' && this.password === '123'){
+  //       this.router.navigate(['home/admin']);
+  //       console.log("HI=>>",this.router);
+  //     } 
+  //     else{
+  //      alert("Wrong, retry again")
+  //     }
+  //   }
+  // }
   login(){
-    if(this.dialog === 0){
-      if( this.username === 'soe' && this.password === '123'){
-        this.router.navigate(['home/admin']);
-        console.log("HI=>>",this.router);
-      } 
-      else{
-       alert("Wrong, retry again")
-      }
-    }
+    firebase.auth().signInWithEmailAndPassword(this.username, this.password)
+    .then(() =>{
+      this.router.navigate(['home/admin'])
+    }).catch(e=>{
+      alert(e.message)
+    })
   }
   show_hide(){
     var eye=<HTMLInputElement>document.getElementById("password");
@@ -63,7 +79,14 @@ export class LoginComponent implements OnInit {courses:any[]
     this.dialog=1;
   }
   create(){
-
+    firebase.auth().createUserWithEmailAndPassword(this.regname, this.regpassword)
+    .then(()=>{
+      this.dialog=0;
+      console.log("Successful");
+      
+    }).catch(e=>{
+      alert(e.message)
+    })
   }
   cancel(){
     this.dialog =0;

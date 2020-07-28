@@ -9,6 +9,10 @@ import { ChildrenaccComponent } from './childrenacc/childrenacc.component';
 import { FormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +21,10 @@ import { AdminComponent } from './admin/admin.component';
     ChildrenaccComponent
   ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+    AngularFireAuthModule, 
+
     BrowserModule,
     FormsModule,
     // AppRoutingModule,

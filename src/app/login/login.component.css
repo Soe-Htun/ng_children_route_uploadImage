@@ -17,15 +17,15 @@
 }
 .name, .password{
     margin-top: 20px;
-    width: 160px;
-    height: 26px;
+    width: 200px;
+    height: 30px;
     text-indent: 30px;
 }
 .btn{
-    width: 75px;
+    width: 97px;
     background-color: #409eff;
     border: 1px solid #409eff;
-    height: 33px;
+    height: 40px;
     margin-top: 20px;
     margin-right: 16px;
     color: white;
@@ -37,39 +37,40 @@ i{
 }
 
 .regmain{
-    position: fixed;
-    width: 280px;
-    height: 260px;
+    position: relative;
+    width: 350px;
+    height: 300px;
     background-color: rgb(240, 240, 240);
-    margin: 0px 50px;
-    top: 32%;
-    left: 37%;
+    top: 50%;
+    left: 50%;
     border-radius:15px ;
+    margin: -400px 0px 0px -150px; ;
 }
 .regsec{
-    margin: 30px 0px 0px 40px
+    
+    margin: 50px 0px 0px 50px
 }
 #regname{
     width:200px;
     margin-top: 30px;
-    height: 24px;
+    height: 30px;
 }
 #regpass{
     width:200px;
-    height: 24px;
+    height: 30px;
     margin-top: 20px;
 }
 .regbtn{
-    width:90px;
-    height: 31px;
+    width:97px;
+    height: 40px;
     margin-top:20px ;
     border-radius: 5px;
     border:1px solid #409eff;
     background-color: #409eff;
 }
 .regcancel{
-    width:90px;
-    height: 31px;
+    width:97px;
+    height: 40px;
     margin-left:20px ;
     border-radius: 5px;
     border:1px solid #409eff;

@@ -1,0 +1,77 @@
+
+.main{
+    position: fixed;
+    width: 100%;
+    height:100%;
+    /* background-color: #83868a */
+    background: url('./../image/realmadrid.jpg');
+    background-size:100% 100%
+}
+.second{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 280px;
+    height: 280px;
+    margin: -100px 0px 0px -100px;
+}
+.name, .password{
+    margin-top: 20px;
+    width: 160px;
+    height: 26px;
+    text-indent: 30px;
+}
+.btn{
+    width: 75px;
+    background-color: #409eff;
+    border: 1px solid #409eff;
+    height: 33px;
+    margin-top: 20px;
+    margin-right: 16px;
+    color: white;
+    border-radius: 7px;
+}
+i{
+    margin-left:-22px ;
+    font-size: 13px;
+}
+
+.regmain{
+    position: fixed;
+    width: 280px;
+    height: 260px;
+    background-color: rgb(240, 240, 240);
+    margin: 0px 50px;
+    top: 32%;
+    left: 37%;
+    border-radius:15px ;
+}
+.regsec{
+    margin: 30px 0px 0px 40px
+}
+#regname{
+    width:200px;
+    margin-top: 30px;
+    height: 24px;
+}
+#regpass{
+    width:200px;
+    height: 24px;
+    margin-top: 20px;
+}
+.regbtn{
+    width:90px;
+    height: 31px;
+    margin-top:20px ;
+    border-radius: 5px;
+    border:1px solid #409eff;
+    background-color: #409eff;
+}
+.regcancel{
+    width:90px;
+    height: 31px;
+    margin-left:20px ;
+    border-radius: 5px;
+    border:1px solid #409eff;
+    background-color: #409eff;
+}

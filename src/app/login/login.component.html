@@ -1,0 +1,23 @@
+<div class="main">
+    <div class="second">
+        <input  [(ngModel)]="username" class="name" type="text" placeholder="Email Address"/><br>
+        <input  id="password" [(ngModel)]="password" type="password" class="password" placeholder="password"/>
+        <span (click)="show_hide()">
+            <i *ngIf="hide" class="far fa-eye-slash"></i>
+            <i *ngIf="view" class="fas fa-eye"></i>
+        </span>
+        <br>
+        <input type="button" class="btn" (click)="login()" value="Login(Ent)"/>
+        <input type="button" class="btn" (click)="sign_up()" value="Sign Up(↑)"/>
+    </div>
+
+    <!--for dialog -->
+   <div *ngIf="dialog==1" class="regmain">
+        <div class="regsec">
+            <input type="text" id="regname" [(ngModel)]="regname" placeholder="Email Address"/><br>
+            <input type="password" id="regpass" [(ngModel)]="regpassword" placeholder="Password"/><br>
+            <input type="button" class="regbtn" value="Create" (click)="create()"/>
+            <input type="button" class="regcancel" value="Cancel(-)" (click)="cancel()"/>
+        </div>
+   </div>
+</div>

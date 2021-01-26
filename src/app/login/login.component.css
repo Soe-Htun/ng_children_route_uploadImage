@@ -17,19 +17,22 @@
 }
 .name, .password{
     margin-top: 20px;
-    width: 200px;
+    width: 120px;
     height: 30px;
     text-indent: 30px;
 }
 .btn{
-    width: 97px;
+    width: 120px;
     background-color: #409eff;
     border: 1px solid #409eff;
     height: 40px;
     margin-top: 20px;
-    margin-right: 16px;
     color: white;
     border-radius: 7px;
+}
+.footer{
+  display: flex;
+  justify-content: space-between;
 }
 i{
     margin-left:-22px ;
@@ -47,7 +50,7 @@ i{
     margin: -400px 0px 0px -150px; ;
 }
 .regsec{
-    
+
     margin: 50px 0px 0px 50px
 }
 #regname{

@@ -57,7 +57,8 @@ export class LoginComponent implements OnInit {courses:any[]
   login(){
     firebase.auth().signInWithEmailAndPassword(this.username, this.password)
     .then(() =>{
-      this.router.navigate(['home/admin'])
+      // this.router.navigate(['home/admin'])
+      this.router.navigate(['fileupload']);
     }).catch(e=>{
       alert(e.message)
     })
